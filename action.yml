@@ -1,0 +1,28 @@
+name: 'Deploy Guard'
+description: 'Block PRs that carry dangerous deploy patterns — mass-DML migrations, unguarded restarts, leaked secrets.'
+author: 'Ivo Setyadi'
+branding:
+  icon: 'shield'
+  color: 'blue'
+
+inputs:
+  config:
+    description: 'Path to the Deploy Guard config file.'
+    required: false
+    default: '.deployguard.yml'
+  fail-on:
+    description: 'Minimum severity that fails the check: error | warn | off.'
+    required: false
+    default: 'error'
+  comment:
+    description: 'Post findings as a PR comment (true/false).'
+    required: false
+    default: 'true'
+
+outputs:
+  findings:
+    description: 'JSON array of findings detected.'
+
+runs:
+  using: 'node20'
+  main: 'dist/index.js'

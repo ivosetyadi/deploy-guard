@@ -1,0 +1,13 @@
+# Deploy Guard configuration (optional).
+# All built-in rules run by default. Use this file to tune behaviour.
+
+fail-on: error        # error | warn | off
+
+# Paths to ignore entirely (glob-ish substring match for now).
+ignore:
+  - "test/fixtures/"
+  - "docs/"
+
+# Disable specific built-in rules by id.
+disable:
+  # - unguarded-restart

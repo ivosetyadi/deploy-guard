@@ -1,0 +1,13 @@
+{
+  "name": "deploy-guard",
+  "version": "0.1.0",
+  "description": "Block PRs that carry dangerous deploy patterns — mass-DML migrations, unguarded restarts, leaked secrets.",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "node test/run.js"
+  },
+  "keywords": ["github-action", "deploy", "migration", "safety", "security", "ci"],
+  "author": "Ivo Setyadi",
+  "license": "MIT",
+  "homepage": "https://ivosetyadi.github.io"
+}
