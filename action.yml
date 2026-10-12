@@ -18,6 +18,10 @@ inputs:
     description: 'Post findings as a PR comment (true/false).'
     required: false
     default: 'true'
+  token:
+    description: 'GitHub token used to read PR files and post comments. Defaults to the workflow token.'
+    required: false
+    default: ${{ github.token }}
 
 outputs:
   findings:
